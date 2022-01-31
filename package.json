@@ -1,11 +1,24 @@
 {
-  "name": "assignment_1",
+  "name": "assignment-1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compile": "babel src --presets @babel/react --out-dir public",
+    "start": "nodemon -w server server/server.js",
+    "watch": "babel src --presets @babel/react --out-dir public --watch --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-react": "^7.16.7"
+  }
 }
